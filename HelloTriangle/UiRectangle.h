@@ -19,7 +19,6 @@ class UiRectangle : public UiElement
 	}
 
 	// Inherited via UiElement
-	virtual void DrawSelf ( ) const override;
 	virtual void GenerateVertices ( Size screenSize ) const override;
 	virtual void SendToGPU ( ) const override;
 };
