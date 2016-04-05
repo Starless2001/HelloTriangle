@@ -9,8 +9,6 @@
 #include <GL\freeglut.h>
 #include "UiRectangle.h"
 
-#define identifier_name( x ) (#x)
-
 using namespace std;
 
 void init ( void );
