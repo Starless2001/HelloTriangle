@@ -1,11 +1,6 @@
 #include "UiRectangle.h"
 #include <iostream>
 
-void UiRectangle::DrawSelf ( ) const
-{
-
-}
-
 void UiRectangle::GenerateVertices (Size screenSize ) const
 {
 	p_vertices = new GLfloat[3 * 4];
