@@ -42,18 +42,6 @@ namespace ComponentModel
 		p_children.pop_back ( );
 	}
 
-	void UiElement::Draw ( ) const
-	{
-		if ( p_visible )
-		{
-			DrawSelf ( );
-			for ( int i = 0; i < num_children; ++i )
-			{
-				p_children[i]->Draw ( );
-			}
-		}
-	}
-
 	inline void UiElement::Show ( )
 	{
 		p_visible = true;
