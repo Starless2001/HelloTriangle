@@ -69,9 +69,6 @@ namespace ComponentModel
 		glBufferData ( GL_ARRAY_BUFFER, sizeof ( p_vertices ), p_vertices, GL_STATIC_DRAW );
 	}
 
-	void UiElement::DrawSelf ( ) const
-	{ }
-
 	void AbsoluteGeometry::Layout ( )
 	{
 		if ( p_parent != nullptr )
