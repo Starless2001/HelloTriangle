@@ -46,14 +46,6 @@ namespace ComponentModel
 		{ }
 	};
 
-	enum class ChildrenHint
-	{
-		///<summary>Child elements can be added, but are unlikely to be removed</summary>
-		STATIC,
-		///<summary>Child elements can be added, and removed often</summary>
-		DYNAMIC
-	};
-
 	class RelativeGeometry
 	{
 		public:
@@ -313,17 +305,6 @@ namespace ComponentModel
 		Location p_location;
 	};
 
-	class Behaviour
-	{
-		public:
-
-		Behaviour ( )
-		{ }
-
-		~Behaviour ( )
-		{ }
-	};
-
 	class UiElement
 	{
 		public:
@@ -469,8 +450,6 @@ namespace ComponentModel
 		///<summary>removes the last child element added</summary>
 		void RemoveLastChild ( UiElement & child );
 
-		void Draw ( ) const;
-
 		bool inline isVisible ( ) const
 		{
 			return p_visible;
@@ -495,14 +474,10 @@ namespace ComponentModel
 		
 		uint16_t num_vertices;
 
-		Behaviour p_behaviour;
 		const UiElement * const p_parent;
 		//shared_ptr<UiElement> p_parent;
 		AbsoluteGeometry p_geometry;
 		vector<shared_ptr<UiElement>> p_children;
-
-		virtual void DrawSelf ( ) const = 0;
-		
 
 		private:
 		static int id_gen;
